@@ -9,6 +9,6 @@ configuration:
   properties:
     command:
       type: string
-    required:
+  required:
       - command
-    additionalProperties: false
+  additionalProperties: false

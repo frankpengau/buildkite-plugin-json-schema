@@ -34,9 +34,9 @@ configuration:
   properties:
     command:
       type: string
-    required:
+  required:
       - command
-    additionalProperties: false
+  additionalProperties: false
 ```
 
 When hovered over, it should show the prompt and the schema associated to it:
