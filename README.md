@@ -14,13 +14,15 @@ Ref:
 
 ## Usage
 
+### Associate directly with file
+
 If using Red Hat YAML VSCode Extension (`redhat.vscode-yaml`), put a comment line at top of the `plugin.yml` file: 
-```
+```yaml
 # yaml-language-server: $schema=https://raw.githubusercontent.com/frankpengau/buildkite-plugin-json-schema/refs/heads/main/schema.json
 ```
 
 Example:
-```
+```yaml
 # yaml-language-server: $schema=https://raw.githubusercontent.com/frankpengau/buildkite-plugin-json-schema/refs/heads/main/schema.json
 
 name: Example BK Plugin
@@ -39,3 +41,19 @@ configuration:
 
 When hovered over, it should show the prompt and the schema associated to it:
 ![VSCode_Example_Screenshot](assets/img/vscode_screenshot.png)
+
+### Automatically Associate with files based on filename (via `.vscode/settings.json`)
+
+```json
+{
+  ...
+  ...
+  ...
+  <any other vscode settings>,
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/frankpengau/buildkite-plugin-json-schema/refs/heads/main/schema.json": [
+      "plugin.yml"
+    ]
+  }
+}
+```
