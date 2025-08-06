@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/frankpengau/buildkite-plugin-json-schema/refs/heads/main/schema.json
+
+name: Example BK Plugin
+description: An Example Buildkite Plugin File
+author: example-group
+requirements:
+  - docker
+configuration:
+  properties:
+    command:
+      type: string
+    required:
+      - command
+    additionalProperties: false
